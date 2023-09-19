@@ -83,6 +83,12 @@ PrivateTmp=true
 [Install]
 WantedBy=multi-user.target
 ```
-sudo systemctl daemon-reload\
-sudo systemctl enable fastapi.service\
-sudo systemctl start fastapi.service\
+sudo systemctl daemon-reload
+
+sudo systemctl enable fastapi.service
+
+sudo systemctl start fastapi.service
+
+sudo systemctl status fastapi.service
+
+verificare se con status viene creato il file di log, se ci fosse un errore creare la cartella log
