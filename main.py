@@ -28,8 +28,9 @@ security = HTTPBearer()
 @app.on_event("startup")
 def check_log_dir():
     os.makedirs("log", exist_ok=True)
-    open("./log/access.log", "a").close()
-    open("./log/error.log", "a").close()
+    with open("log/access.log", "a") as f1, open("log/error.log", "a") as f2:
+        pass
+
 
 def get_current_user(authorization: HTTPAuthorizationCredentials = Depends(security)) -> dict:
     token = authorization.credentials
