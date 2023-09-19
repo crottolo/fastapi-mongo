@@ -1,0 +1,9 @@
+fastapi[all]
+pymongo
+uvicorn
+python-dotenv
+httpie
+glances
+gunicorn
+uvloop
+httptools
